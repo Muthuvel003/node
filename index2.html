@@ -1,0 +1,49 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+
+
+
+</head>
+<body>
+	<script>
+
+		//var myArray=[{x:10,y:10},{x:20,y:20}];
+
+		/*d3.csv("new2.csv", function(myArray){
+			myArray.forEach(function (d){
+				console.log(d.x + ", " + d.y);
+			});
+
+		});*/
+
+		var scale=d3.scale.linear()
+			.domain([1,5])
+			.range([0,400]);
+
+		var svg=d3.select("body").append("svg");
+					svg.attr("width",450);
+					svg.attr("height",250);
+
+		function render(data,color){
+			var go=svg.selectAll("rect").data(data);
+
+
+				go.enter().append("rect")
+				go.attr("x",scale)
+				 	.attr("y",50)
+				 	.attr("width",50)
+				 	.attr("height",50)
+				go.attr("fill",color);
+				go.exit().remove();
+		}
+
+		setTimeout(function(){render([1,2,3,4,5],"red");},1000);
+			setTimeout(function(){render([1,2,3],"blue");},2000);
+					setTimeout(function(){render([4,5],"green");},3000);
+
+	</script>
+
+	<p>Welcome</p>
+</body>
+</html>

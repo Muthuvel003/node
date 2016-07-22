@@ -1,0 +1,11 @@
+cname,ccode,iname,year,value
+India,Ind,Rural,1960,10
+India,Ind,Urban,1960,20
+Pakistan,Pak,Rural,1960,30
+Pakistan,Pak,Urban,1960,40
+Bangladesh,Ban,Rural,1960,50
+Bangladesh,Ban,Urban,1960,60
+England,Eng,Rural,1960,70
+England,Eng,Urban,1960,80
+Australia,Aus,Rural,1960,90
+Australia,Aus,Urban,1960,100
